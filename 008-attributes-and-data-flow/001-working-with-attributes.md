@@ -1,6 +1,6 @@
 ## Working with Attributes — getAttribute and setAttribute
 
-### 1. What is an attribute? (quick reminder)
+### 1. What is an attribute? 
 
 Example HTML:
 
@@ -12,7 +12,7 @@ Here:
 - `disabled`
 - `title`
 
-👉 These are **attributes**.
+These are **attributes**.
 
 Attributes provide extra information about an element.
 
@@ -20,7 +20,7 @@ They define configuration, metadata, and behavior hints.
 
 ---
 
-### 2. Two ways to access attributes (IMPORTANT)
+### 2. Two ways to access attributes (Important)
 
 There are two related but different mechanisms:
 
@@ -57,7 +57,7 @@ If the attribute does not exist:
 
 Important:
 
-👉 The return value is always a **string or null**.
+The return value is always a **string or null**.
 
 ---
 
@@ -79,21 +79,21 @@ Another example:
 
     btn.setAttribute("title", "Click to save");
 
-👉 The attribute is updated directly in the DOM.
+The attribute is updated directly in the DOM.
 
 ---
 
-### 5. Removing attributes (quick awareness)
+### 5. Removing attributes (Quick awareness)
 
     btn.removeAttribute("disabled");
 
 Result:
 
-👉 The button becomes clickable again.
+The button becomes clickable again.
 
 ---
 
-### 6. Attribute methods vs DOM properties (IMPORTANT CLARITY)
+### 6. Attribute methods vs DOM properties (Important clarity)
 
 Example:
 
@@ -109,16 +109,16 @@ But conceptually:
 
 Example difference:
 
-    input.value        // current live value
+    input.value                 // current live value
     input.getAttribute("value") // initial HTML value
 
 Beginner rule of thumb:
 
-👉 Use attribute methods when working with **custom attributes**.
+Use attribute methods when working with **custom attributes**.
 
 ---
 
-### 7. Real-world use case (VERY COMMON)
+### 7. Real-world use case (Very common)
 
 Example HTML:
 
@@ -130,7 +130,7 @@ JavaScript:
 
 This pattern is heavily used in production:
 
-- IDs from backend
+- Backend identifiers
 - Metadata storage
 - UI logic linking
 
@@ -138,11 +138,11 @@ This pattern is heavily used in production:
 
 ### 8. Common beginner mistakes
 
-Expecting numbers:
+Incorrect assumption:
 
     btn.getAttribute("data-id"); // "42"
 
-👉 Attributes always return **strings**.
+Attributes always return **strings**.
 
 If needed:
 
@@ -150,7 +150,7 @@ If needed:
 
 ---
 
-Forgetting attribute names must be strings:
+Incorrect usage:
 
     btn.getAttribute(data-id); // error
 
@@ -163,5 +163,5 @@ Correct:
 ### 9. One-line mental model
 
 Attributes live in HTML.  
-`getAttribute()` reads HTML.  
-`setAttribute()` updates HTML.
+getAttribute reads HTML.  
+setAttribute updates HTML.
